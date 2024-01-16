@@ -1,0 +1,186 @@
+/* styles.css */
+
+/* Global Styles */
+h1 {
+    margin-left: -3%; /* Adjust the left margin as needed */
+  }
+  
+  body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Layout Styles */
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25, .col-50, .col-75 {
+    -ms-flex: 25%;
+    flex: 25%;
+    padding: 0 1.6vw;
+  }
+  
+  .col-50 {
+    -ms-flex:100%;
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%;
+    flex: 75%;
+  }
+  
+  /* Container Styles for .container */
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 800px;
+    margin: 0 -10%; /* Center the container */
+    height: 100%; /* Set height to auto for dynamic adjustment based on content */
+    max-height: 660px; /* Set a maximum height if needed */
+  }
+  
+  /* Default styles for devices with a standard resolution */
+  .container2 {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    width: 180%; /* Adjust the width as needed */
+    max-width: 700px;
+    margin: 0 -70%; /* Center the container */
+    height: 100%; /* Set height to auto for dynamic adjustment based on content */
+    max-height: 660px; /* Set a maximum height if needed */
+  }
+  
+  
+  /* Form Input Styles */
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Button Styles */
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #00A9FF;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #89CFF3;
+  }
+  
+  /* Link Styles */
+  a {
+    color: #2196F3;
+  }
+  
+  /* Separator Styles */
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  /* Price Styles */
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 1000px wide */
+  @media (max-width: 300px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+  
+    .col-25 {
+      margin-bottom: 3px;
+    }
+  }
+  
+  @media (max-width: 1500px) {
+    .container {
+      margin: 0 auto;
+      width: auto; /* Set width to auto for smaller screens */
+      min-width: 300px; /* Remove max-width for smaller screens */
+    }
+    .container2 {
+      margin: 0 auto;
+      width: auto; /* Set width to auto for smaller screens */
+      min-width: 300px; /* Remove max-width for smaller screens */
+    }
+  }
+  
+  /* Popup Styles */
+  .hidden {
+    display: none;
+  }
+  
+  #payment-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw; /* Adjust the width as needed */
+    max-width: 90vw; /* Set a maximum width */
+    min-width: 450px; /* Set a minimum width */
+    height: 80vh; /* Adjust the height as needed */
+    max-height: 95vh; /* Set a maximum height */
+    background-color: #CDF5FD;
+    padding: 2vw  6vw; /* Use viewport width units for padding */
+    border: 1px solid #ddd;
+    border-radius: 2vw; /* Use viewport width units for border-radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+  }
+  
+  #close-popup {
+    position: absolute;
+    top: 15px;
+    right: 1vw;
+    background-color: #ddd;
+    border: none;
+    color: #333;
+    padding: 10px;
+    font-size: 8px;
+    cursor: pointer;
+    border-radius: 2vw;
+  }
+  
+  #close-popup:hover {
+    background-color: #aaa;
+    color: white;
+  }
